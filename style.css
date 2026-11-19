@@ -1,0 +1,117 @@
+:root {
+  --latar: #e9eef3;
+  --kertas: #ffffff;
+  --teks: #1c2733;
+  --teks-pudar: #5b6b7b;
+  --garis: #cfd8e1;
+  --aksen: #1d5fd1;
+  --aksen-gelap: #174aa3;
+  --selesai: #2e8b6a;
+  --bahaya: #b3341f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--latar);
+  color: var(--teks);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+  padding: 2rem 1rem;
+}
+
+.app {
+  max-width: 34rem;
+  margin: 0 auto;
+  background: var(--kertas);
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  padding: 1.75rem;
+}
+
+h1 { margin: 0; font-size: 1.75rem; letter-spacing: -0.01em; }
+.ringkasan { margin: 0.25rem 0 1.5rem; color: var(--teks-pudar); }
+
+.input-baris { display: flex; gap: 0.5rem; }
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#tombol-tambah {
+  background: var(--aksen);
+  color: #fff;
+  border: 0;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+}
+#tombol-tambah:hover { background: var(--aksen-gelap); }
+
+:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+
+.filter { display: flex; gap: 0.4rem; margin: 1.25rem 0 0.75rem; flex-wrap: wrap; }
+.filter button {
+  background: transparent;
+  border: 1px solid var(--garis);
+  color: var(--teks-pudar);
+  padding: 0.3rem 0.8rem;
+}
+.filter button.aktif {
+  background: var(--teks);
+  border-color: var(--teks);
+  color: #fff;
+}
+
+.daftar { list-style: none; margin: 0; padding: 0; }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--garis);
+}
+.item input[type="checkbox"] { width: 1.15rem; height: 1.15rem; accent-color: var(--selesai); }
+.item .teks { flex: 1; overflow-wrap: anywhere; }
+.item.selesai .teks { text-decoration: line-through; color: var(--teks-pudar); }
+
+.item .hapus {
+  background: transparent;
+  border: 0;
+  color: var(--bahaya);
+  padding: 0.25rem 0.5rem;
+}
+.item .hapus:hover { background: #f8e3df; }
+
+.kosong { color: var(--teks-pudar); text-align: center; padding: 1.5rem 0; margin: 0; }
+.kosong[hidden] { display: none; }
+
+.hapus-selesai {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid var(--garis);
+  color: var(--teks-pudar);
+  padding: 0.4rem 0.9rem;
+}
+.hapus-selesai:hover { border-color: var(--bahaya); color: var(--bahaya); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

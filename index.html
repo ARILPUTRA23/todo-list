@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Tugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Daftar Tugas</h1>
+      <p id="ringkasan" class="ringkasan">Belum ada tugas.</p>
+    </header>
+
+    <div class="input-baris">
+      <label for="input-tugas" class="sr-only">Tugas baru</label>
+      <input id="input-tugas" type="text" placeholder="Tulis tugas baru" autocomplete="off">
+      <button id="tombol-tambah" type="button">Tambah tugas</button>
+    </div>
+
+    <nav class="filter" aria-label="Filter tugas">
+      <button type="button" data-filter="semua" class="aktif">Semua</button>
+      <button type="button" data-filter="belum">Belum selesai</button>
+      <button type="button" data-filter="selesai">Selesai</button>
+    </nav>
+
+    <ul id="daftar" class="daftar"></ul>
+    <p id="kosong" class="kosong">Daftar masih kosong. Tulis tugas pertamamu di atas.</p>
+
+    <button id="hapus-selesai" type="button" class="hapus-selesai">Hapus yang selesai</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

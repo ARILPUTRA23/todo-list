@@ -1,0 +1,19 @@
+# File sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# File sementara dan log
+*.log
+*.tmp
+*.bak
+
+# Dependensi (jika nanti memakai npm)
+node_modules/
+
+# File rahasia
+.env
